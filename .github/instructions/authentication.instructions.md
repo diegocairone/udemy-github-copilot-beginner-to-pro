@@ -1,3 +1,7 @@
+---
+description: Read this before implementing or modifying authentication in the project
+---
+
 # Authentication Guidelines
 
 All authentication in this app is handled by Clerk. Do not add or use any other auth methods.

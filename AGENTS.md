@@ -25,14 +25,6 @@ These instructions guide AI assistants in maintaining consistency and quality wh
 4. **Performance**: Follow Next.js best practices
 5. **Security**: Validate inputs and use secure patterns
 
-## Documentation Structure
-
-Detailed guidelines are organized in the `/docs` directory.
-- `docs/authentication.md` — Clerk auth rules, protected `/dashboard`, homepage redirect, and modal sign-in/up.
-- `docs/ui-components.md` — UI component usage rules, mandatory use of Shadcn UI.
-
-**It is INCREDBLY IMPORTANT to ALWAYS read the relevant individual instructions files within the `/docs` directory BEFORE generating ANY code.**
-
 ## Development Workflow
 
 1. **Read relevant docs** before making changes
