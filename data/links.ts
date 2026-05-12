@@ -44,3 +44,17 @@ export async function createUserLink(userId: string, url: string) {
 
   return createdLink;
 }
+
+export async function updateUserLink(id: number, url: string) {
+  const [updatedLink] = await db
+    .update(links)
+    .set({ url })
+    .where(eq(links.id, id))
+    .returning();
+
+  return updatedLink;
+}
+
+export async function deleteUserLink(id: number) {
+  return db.delete(links).where(eq(links.id, id));
+}
