@@ -7,7 +7,9 @@ export async function GET(
   _request: Request,
   { params }: { params: { shortCode: string } }
 ) {
-  const shortCode = params.shortCode;
+  const resolvedParams = await params;
+  const shortCode = resolvedParams.shortCode;
+
   const [link] = await db
     .select()
     .from(links)
