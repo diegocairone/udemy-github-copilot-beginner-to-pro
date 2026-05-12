@@ -134,7 +134,7 @@ export function UserLinksList({ links }: UserLinksListProps) {
             <Card key={link.id}>
               <CardHeader>
                 <CardTitle className="text-lg">
-                  <code className="text-sm font-mono bg-muted px-2 py-1 rounded">/{link.shortCode}</code>
+                  <code className="text-sm font-mono bg-muted px-2 py-1 rounded">/l/{link.shortCode}</code>
                 </CardTitle>
                 <CardDescription className="break-all">{link.url}</CardDescription>
               </CardHeader>
@@ -144,11 +144,9 @@ export function UserLinksList({ links }: UserLinksListProps) {
                     Created {new Date(link.createdAt).toLocaleDateString()}
                   </span>
                   <div className="flex flex-wrap gap-2">
-                    <Link href={`/${link.shortCode}`}>
-                      <Button variant="outline" size="sm">
-                        Visit
-                      </Button>
-                    </Link>
+                      <Button asChild variant="outline" size="sm">
+                      <Link href={`/l/${link.shortCode}`}>Visit</Link>
+                    </Button>
                     <Button type="button" variant="outline" size="sm" onClick={() => openEditDialog(link)}>
                       Edit
                     </Button>
